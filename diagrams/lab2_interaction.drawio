@@ -1,0 +1,25 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="ЛР2 — взаимодействие компонентов">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="user" value="Пользователь" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="40" y="300" width="140" height="60" as="geometry"/></mxCell>
+        <mxCell id="browser" value="Браузер" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="240" y="300" width="140" height="60" as="geometry"/></mxCell>
+        <mxCell id="frontend" value="Frontend&#xa;HTML + JavaScript" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="440" y="300" width="160" height="60" as="geometry"/></mxCell>
+        <mxCell id="api" value="API" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="660" y="300" width="140" height="60" as="geometry"/></mxCell>
+        <mxCell id="backend" value="Backend" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="860" y="300" width="140" height="60" as="geometry"/></mxCell>
+        <mxCell id="storage" value="Хранилище данных&#xa;(предположение)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="860" y="450" width="180" height="70" as="geometry"/></mxCell>
+        <mxCell id="external" value="Внешний сервис&#xa;аналитики" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="660" y="450" width="170" height="70" as="geometry"/></mxCell>
+        <mxCell id="e1" value="действие пользователя" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" edge="1" parent="1" source="user" target="browser"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" value="отображение страницы" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" edge="1" parent="1" source="browser" target="frontend"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" value="HTTP GET / HTTP POST" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" edge="1" parent="1" source="frontend" target="api"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" value="HTTP-запрос" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" edge="1" parent="1" source="api" target="backend"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" value="чтение / запись данных" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" edge="1" parent="1" source="backend" target="storage"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" value="события аналитики" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" edge="1" parent="1" source="frontend" target="external"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e7" value="HTTP-ответ / JSON" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;dashed=1;" edge="1" parent="1" source="backend" target="api"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e8" value="обновление интерфейса" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;dashed=1;" edge="1" parent="1" source="frontend" target="browser"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
