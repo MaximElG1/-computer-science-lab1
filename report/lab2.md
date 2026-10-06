@@ -45,7 +45,7 @@
 
 GET-запрос используется браузером для получения представления ресурса. В данном случае браузер получает страницу продукта.
 
-![GET-запрос страницы продукта](../images/screenshots/02_get_request.png)
+![GET-запрос страницы продукта](../images/lab2/screenshots/02_get_request.png)
 
 ### POST-запрос API
 
@@ -85,7 +85,7 @@ HTTP-ответ содержит статус-код, заголовки и те
 
 В некоторых ответах был виден серверный компонент `MSX Turbo R (R900) Web Server 1.13`. Наличие такого заголовка является наблюдаемым фактом, однако по нему нельзя делать вывод о всей внутренней архитектуре серверной части.
 
-![Заголовки HTTP-ответа](../images/screenshots/04_response_headers.png)
+![Заголовки HTTP-ответа](../images/lab2/screenshots/04_response_headers.png)
 
 ## 4. Анализ параметров и передаваемых данных
 
@@ -103,7 +103,7 @@ HTTP-ответ содержит статус-код, заголовки и те
 
 Отдельно исследовался HTML-ответ страницы продукта. В Preview были видны HTML-разметка, метаданные страницы, ссылки на ресурсы и клиентский JavaScript.
 
-![HTML-ответ страницы](../images/screenshots/03_html_preview.png)
+![HTML-ответ страницы](../images/lab2/screenshots/03_html_preview.png)
 
 ## 5. Анализ cookies
 
@@ -122,7 +122,7 @@ HTTP-ответ содержит статус-код, заголовки и те
 
 На скриншоте ниже значения cookies скрыты.
 
-![Cookies](../images/screenshots/06_cookies_redacted.png)
+![Cookies](../images/lab2/screenshots/06_cookies_redacted.png)
 
 ## 6. Взаимодействие Frontend, API и Backend
 
@@ -176,7 +176,7 @@ HTTP-ответ содержит статус-код, заголовки и те
 - обновление интерфейса;
 - взаимодействие с внешним сервисом аналитики.
 
-![Схема взаимодействия компонентов](../images/screenshots/05_interaction_scheme.png)
+![Схема взаимодействия компонентов](../images/lab2/screenshots/05_interaction_scheme.png)
 
 Исходный файл схемы находится в каталоге `diagrams`.
 
