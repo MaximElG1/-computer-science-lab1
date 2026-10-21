@@ -1,0 +1,27 @@
+name: Render lab 3 diagram
+on:
+  push:
+    branches: [lab3]
+    paths:
+      - 'images/lab3/fitness_club_er.svg'
+      - '.github/workflows/render-lab3-diagram.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install sharp
+      - name: Render SVG to PNG
+        run: node -e "require('sharp')('images/lab3/fitness_club_er.svg').png().toFile('images/lab3/fitness_club_er.png')"
+      - name: Commit generated PNG
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add images/lab3/fitness_club_er.png
+          git diff --cached --quiet || (git commit -m 'Render lab 3 ER diagram as PNG' && git push)
